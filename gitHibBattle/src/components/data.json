@@ -1,0 +1,17 @@
+[
+    {
+        "/": "all"
+    },
+    {
+        "javascript": "javascript"
+    },
+    {
+        "css": "css"
+    },
+    {
+        "java": "java"
+    },
+    {
+        "python": "python"
+    }
+]
