@@ -1,16 +1,23 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Language from "./Language";
-
+import HeroNav from "./Hero";
+import BattelMain from "./BattelMain";
 class Main extends React.Component {
+  constructor(props) {
+    super();
+  }
+
   render() {
     return (
-      <div className="container grid grid-cols-4 gap-8 pt-8 pb-8">
+      <>
         <Route path="/" exact>
-          <Language language={"all"} />
+          <Route path="/path/:id" component={Language} exact />
         </Route>
-        <Route path="/path/:id" component={Language} />
-      </div>
+        <Route path="/battle">
+          <BattelMain />
+        </Route>
+      </>
     );
   }
 }

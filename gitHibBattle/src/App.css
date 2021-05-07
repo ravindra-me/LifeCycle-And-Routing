@@ -68,3 +68,12 @@
 .active {
   color: red;
 }
+
+.dark {
+  background-color: black;
+  min-height: 100vh;
+}
+
+.text-white {
+  color: white;
+}

@@ -13,5 +13,8 @@
     },
     {
         "python": "python"
+    },
+    {
+        "ruby": "ruby"
     }
 ]
