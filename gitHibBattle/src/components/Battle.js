@@ -69,6 +69,16 @@ export default class Battle extends React.Component {
     }));
   };
 
+  resetBattle = () => {
+    this.setState({
+      player1: null,
+      player2: null,
+      player1Data: null,
+      player2Data: null,
+      battle: false,
+    });
+  };
+
   render() {
     return (
       <section>
@@ -81,6 +91,7 @@ export default class Battle extends React.Component {
             <BattlePlayer
               player1={this.state.player1Data}
               player2={this.state.player2Data}
+              resetBattle={this.resetBattle}
             />
           ) : (
             <div>
