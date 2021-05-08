@@ -77,3 +77,23 @@
 .text-white {
   color: white;
 }
+
+.form-control {
+  border: 1px solid lightslategrey;
+}
+
+.btn {
+  background-color: black;
+  padding: 0.8rem 1rem;
+  border: 0.25rem;
+  color: white;
+}
+
+.img2 {
+  width: 250px;
+  height: 250px;
+}
+.red {
+  color: red;
+  font-weight: 600;
+}

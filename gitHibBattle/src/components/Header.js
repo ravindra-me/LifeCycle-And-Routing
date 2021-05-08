@@ -2,17 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Header(props) {
-  console.log(props.isDark);
   return (
     <div className="container">
       <header className="flex justify-between pt-4 pb-4">
         <nav>
-          <ul className="flex">
-            <li
-              className={`${
-                props.isDark.darkmode ? "text-white mr-4" : "mr-4"
-              }`}
-            >
+          <ul className={props.dark ? "flex text-white" : "flex"}>
+            <li className="mr-4">
               <NavLink
                 to="/"
                 className="text-2xl"
@@ -22,20 +17,20 @@ function Header(props) {
                 Popular
               </NavLink>
             </li>
-            <li className={`${props.isDark.darkmode ? "text-white " : ""}`}>
+            <li>
               <NavLink
                 to="/battle"
                 className="text-2xl"
                 activeClassName="active"
                 exact
               >
-                Battel
+                Battle
               </NavLink>
             </li>
           </ul>
         </nav>
-        <button className="text-3xl" onClick={() => props.dark()}>
-          {props.isDark.darkmode === true ? "💡" : "🔦"}
+        <button className="text-3xl" onClick={() => props.handleDark()}>
+          {props.dark === true ? "💡" : "🔦"}
         </button>
       </header>
     </div>
