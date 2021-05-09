@@ -36,6 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
 *,
 *::after,
 *::before {
@@ -43,57 +44,61 @@
   margin: 0;
   padding: 0;
 }
+
 .container {
-  max-width: 1250px;
-  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-}
-.img {
-  width: 100%;
-  object-fit: cover;
-}
-.font-0 {
-  font-size: 0;
+  padding: 0 2rem;
 }
 
-.width-40 {
-  width: 40%;
-  margin: 0 auto;
-}
-.cart {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  background-color: rgb(245, 243, 243);
-}
 .active {
-  color: red;
-}
-
-.dark {
   background-color: black;
-  min-height: 100vh;
-}
-
-.text-white {
   color: white;
 }
 
-.form-control {
-  border: 1px solid lightslategrey;
+progress::-moz-progress-bar {
+  background: green;
 }
 
-.btn {
-  background-color: black;
-  padding: 0.8rem 1rem;
-  border: 0.25rem;
-  color: white;
+/* For Chrome or Safari */
+progress::-webkit-progress-value {
+  background: green;
 }
 
-.img2 {
-  width: 250px;
-  height: 250px;
+/* For IE10 */
+progress {
+  background: green;
 }
-.red {
-  color: red;
-  font-weight: 600;
+
+.question-panal {
+  box-sizing: border-box;
+  width: 60%;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+}
+
+table {
+  margin: 1rem 0;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+}
+
+td {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+tr {
+  text-align: center;
+}
+
+tr svg {
+  margin: 0 auto;
 }
