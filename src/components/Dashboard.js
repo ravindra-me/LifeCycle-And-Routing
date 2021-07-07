@@ -1,19 +1,19 @@
-import React from "react";
-import Loader from "./Loader";
-import Questions from "./Questions";
+import React from 'react';
+import Loader from './Loader';
+import Questions from './Questions';
 export default class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       category: null,
       categoryId: 9,
-      difficulty: "easy",
+      difficulty: 'easy',
       isQuestion: false,
     };
   }
 
   componentDidMount() {
-    fetch("https://opentdb.com/api_category.php")
+    fetch('https://opentdb.com/api_category.php')
       .then((data) => data.json())
       .then((data) =>
         this.setState({
@@ -23,7 +23,7 @@ export default class Dashboard extends React.Component {
   }
 
   render() {
-    let lables = ["easy", "medium", "hard"];
+    let lables = ['easy', 'medium', 'hard'];
     if (!this.state.category) {
       return <Loader />;
     }
@@ -34,14 +34,14 @@ export default class Dashboard extends React.Component {
             <div>
               <h1 className="text-4xl mt-12 text-center ">Quiz App</h1>
               <p className="text-center mt-4 font-bold  ">
-                {" "}
-                Click on Any category and lable based on your requirement{" "}
+                {' '}
+                Click on Any category and lable based on your requirement{' '}
               </p>
               <ul className="grid grid-cols-3 mt-8">
                 {this.state.category.map((e) => (
                   <li
                     className={`bg-gray-300  m-4 rounded-xl hover:bg-gray-700 hover:text-white  font-semibold ${
-                      this.state.categoryId === e.id ? "active" : ""
+                      this.state.categoryId === e.id ? 'active' : ''
                     }`}
                     onClick={() =>
                       this.setState({
@@ -55,14 +55,14 @@ export default class Dashboard extends React.Component {
               </ul>
               <div className="p-4 text-center">
                 <h1 className="text-4xl text-center mb-8">
-                  {" "}
-                  Select Questions Lable
+                  {' '}
+                  Select Questions Label
                 </h1>
                 <ul className="flex ">
                   {lables.map((lable) => (
                     <li
                       className={`mr-4 hover:bg-gray-700 hover:text-white bg-gray-300	rounded-xl ${
-                        this.state.difficulty === lable ? "active" : ""
+                        this.state.difficulty === lable ? 'active' : ''
                       }`}
                       onClick={() =>
                         this.setState({
@@ -82,8 +82,8 @@ export default class Dashboard extends React.Component {
                   }
                   className="mt-8 bg-gray-700	hover:bg-gray-300 px-8 py-4 rounded-xl text-white hover:text-black "
                 >
-                  {" "}
-                  Start Quiz{" "}
+                  {' '}
+                  Start Quiz{' '}
                 </p>
               </div>
             </div>
